@@ -1,6 +1,15 @@
 # FoodDeliveryApplication
 
-References:
+## Functional Requirements:
+* User search a restaurant based on **restaurant name**
+* Order food by choosing different **menu item**, **quantity** and add a **note** about **diet restriction**
+* User can fills in the **delivery address**
+* After user ordered, the order should contain **food items**, **quantity**, **price** and **order time**
+* User pays for oreder by providing **credit card number**, **expiration date**, **security code**
+* After successfully payed, payment return **payment ID**, **timestamp**
+* User can see the **estimated delivery time**
+
+## References:
 
 Spring Data REST - Reference Documentation:
 https://docs.spring.io/spring-data/rest/docs/current/reference/html/
