@@ -1,0 +1,7 @@
+demo/service/OrderInfoService.class
+demo/OrderServiceApplication.class
+demo/rest/OrderInfoController.class
+demo/service/impl/OrderInfoServiceImpl.class
+demo/domain/OrderedItem.class
+demo/domain/OrderInfo.class
+demo/domain/OrderInfoRepository.class
