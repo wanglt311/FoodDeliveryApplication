@@ -9,6 +9,11 @@
 * After successfully payed, payment return **payment ID**, **timestamp**
 * User can see the **estimated delivery time**
 
+## Non-Functional Requirements:
+* Use microservices architecture
+* reasonable amount of unit tests, integration tests and mvc tests
+* at least one place to handle payment error case
+
 ## References:
 
 Spring Data REST - Reference Documentation:
