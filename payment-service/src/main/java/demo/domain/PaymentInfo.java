@@ -1,17 +1,15 @@
 package demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import demo.domain.CreditCardInfo;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
+import javax.persistence.Id;
 import java.util.Date;
 
 
@@ -35,8 +33,17 @@ public class PaymentInfo {
     private String userName;
 
     public PaymentInfo() {
-        this.orderId = null;
         this.creditCardInfo = null;
+    }
+
+    public PaymentInfo(CreditCardInfo creditCardInfo) {
+        this.creditCardInfo = creditCardInfo;
+    }
+
+    public PaymentInfo(String firstName, String lastName, Long cardNum, int expirationMonth,
+                       int expirationYear, int securityCode) {
+        this.creditCardInfo = new CreditCardInfo(firstName, lastName, cardNum, expirationMonth,
+                expirationYear, securityCode);
     }
 
     @JsonCreator

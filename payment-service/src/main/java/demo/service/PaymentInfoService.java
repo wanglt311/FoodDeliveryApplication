@@ -18,7 +18,7 @@ public interface PaymentInfoService {
 
     PaymentInfo findByOrderId(String orderId);
 
-    PaymentInfoDto findByPaymentId(Long paymentId);
+    PaymentInfoDto findByPaymentId(Long id);
 
     void deleteAll();
 
