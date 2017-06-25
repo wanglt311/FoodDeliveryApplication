@@ -32,6 +32,11 @@ public class MenuInfo {
     }
 
     @JsonCreator
+    public MenuInfo(@JsonProperty("menuId") String menuId) {
+        this.menuId = menuId;
+    }
+
+    @JsonCreator
     public MenuInfo(@JsonProperty("menuId") String menuId,
                     @JsonProperty("foodName") String foodName,
                     @JsonProperty("foodPrice") double foodPrice,

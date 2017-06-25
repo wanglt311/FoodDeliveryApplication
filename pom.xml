@@ -16,7 +16,6 @@
     <version>1.0.0.BUILD-SNAPSHOT</version>
     <modules>
         <module>restaurant-service</module>
-        <module>user-service</module>
         <module>order-service</module>
         <module>payment-service</module>
         <module>delivery-service</module>
@@ -116,6 +115,17 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>3.6.2</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

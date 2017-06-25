@@ -11,7 +11,6 @@
         <module name="order-service" />
         <module name="payment-service" />
         <module name="restaurant-service" />
-        <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
