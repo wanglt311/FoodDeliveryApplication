@@ -19,8 +19,7 @@ public class DeliveryInfo {
     @Id
     private Long id;
     private String orderId;
-    private String firstName;
-    private String lastName;
+    private String userName;
     private String deliveryAddress;
     private String phoneNum;
 
@@ -30,13 +29,11 @@ public class DeliveryInfo {
 
     @JsonCreator
     public DeliveryInfo(@JsonProperty("orderId") String orderId,
-                        @JsonProperty("firstName") String firstName,
-                        @JsonProperty("lastName") String lastName,
+                        @JsonProperty("firstName") String userName,
                         @JsonProperty("deliveryAddress") String deliveryAddress,
                         @JsonProperty("phoneNum") String phoneNum) {
         this.orderId = orderId;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.userName = userName;
         this.deliveryAddress = deliveryAddress;
         this.phoneNum = phoneNum;
     }

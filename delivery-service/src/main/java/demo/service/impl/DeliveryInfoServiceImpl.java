@@ -36,7 +36,7 @@ public class DeliveryInfoServiceImpl implements DeliveryInfoService {
     }
 
     @Override
-    public DeliveryInfo findByFristNameAndLastName(String firstname, String lastName) {
-        return deliveryInfoRepository.findByFirstNameAndLastName(firstname, lastName);
+    public DeliveryInfo findByUserName(String userName) {
+        return deliveryInfoRepository.findByUserName(userName);
     }
 }

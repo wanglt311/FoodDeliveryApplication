@@ -12,5 +12,5 @@ public interface DeliveryInfoService {
 
     List<DeliveryInfo> findAll();
 
-    DeliveryInfo findByFristNameAndLastName(String firstname, String lastName);
+    DeliveryInfo findByUserName(String userName);
 }

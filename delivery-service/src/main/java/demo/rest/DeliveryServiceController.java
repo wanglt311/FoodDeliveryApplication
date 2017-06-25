@@ -31,9 +31,8 @@ public class DeliveryServiceController {
         return this.deliveryInfoService.findAll();
     }
 
-    @RequestMapping(value = "/deliveryinfos/{firstName}/{lastName}", method = RequestMethod.GET)
-    public DeliveryInfo findByFirstNameAndLastName(@PathVariable("firstName") String firstName,
-                                                   @PathVariable("lastName") String lastName) {
-        return this.deliveryInfoService.findByFristNameAndLastName(firstName, lastName);
+    @RequestMapping(value = "/deliveryinfos/{userName}", method = RequestMethod.GET)
+    public DeliveryInfo findByuserName(@PathVariable("userName") String userName) {
+        return this.deliveryInfoService.findByUserName(userName);
     }
 }

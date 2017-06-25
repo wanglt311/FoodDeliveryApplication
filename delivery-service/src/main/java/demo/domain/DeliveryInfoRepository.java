@@ -20,7 +20,6 @@ public interface DeliveryInfoRepository extends Repository<DeliveryInfo, Long> {
     List<DeliveryInfo> findAll();
 
     @RestResource(path = "deliveries", rel = "deliveries")
-    DeliveryInfo findByFirstNameAndLastName(@Param("firstName") String firstName,
-                                            @Param("lastName") String lastName);
+    DeliveryInfo findByUserName(@Param("firstName") String userName);
 
 }
