@@ -68,4 +68,6 @@ public class RestaurantInfo {
         this.menuInfoList = menuInfoList;
     }
 
+
+
 }
