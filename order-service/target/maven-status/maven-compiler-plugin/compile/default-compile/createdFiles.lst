@@ -4,4 +4,5 @@ demo/rest/OrderInfoController.class
 demo/service/impl/OrderInfoServiceImpl.class
 demo/domain/OrderedItem.class
 demo/domain/OrderInfo.class
+demo/rest/IndexController.class
 demo/domain/OrderInfoRepository.class
