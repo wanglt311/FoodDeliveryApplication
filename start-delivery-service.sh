@@ -1,0 +1,1 @@
+java -jar delivery-service/target/delivery-service-1.0.0.BUILD-SNAPSHOT.jar
