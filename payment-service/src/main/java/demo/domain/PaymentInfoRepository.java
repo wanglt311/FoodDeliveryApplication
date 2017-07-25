@@ -25,4 +25,5 @@ public interface PaymentInfoRepository extends JpaRepository<PaymentInfo, Long> 
     void deleteAll();
 
     void deleteByOrderId(@Param("orderId") String orderId);
+
 }

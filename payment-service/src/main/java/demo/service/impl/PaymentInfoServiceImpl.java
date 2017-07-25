@@ -2,6 +2,7 @@ package demo.service.impl;
 
 import demo.domain.PaymentInfo;
 import demo.domain.PaymentInfoRepository;
+import demo.domain.PaymentStatus;
 import demo.service.PaymentInfoDto;
 import demo.service.PaymentInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,5 +75,11 @@ public class PaymentInfoServiceImpl implements PaymentInfoService{
     @Override
     public void deleteByOrderId(String orderId) {
         this.paymentInfoRepository.deleteByOrderId(orderId);
+    }
+
+    @Override
+    public PaymentStatus checkPaymentStatus(String orderId) {
+        PaymentStatus paymentStatus = this.paymentInfoRepository.findByOrderId(orderId).getPaymentStatus();
+        return paymentStatus;
     }
 }

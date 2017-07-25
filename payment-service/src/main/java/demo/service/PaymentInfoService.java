@@ -1,6 +1,7 @@
 package demo.service;
 
 import demo.domain.PaymentInfo;
+import demo.domain.PaymentStatus;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -23,4 +24,6 @@ public interface PaymentInfoService {
     void deleteAll();
 
     void deleteByOrderId(String orderId);
+
+    PaymentStatus checkPaymentStatus(String orderId);
 }

@@ -31,6 +31,7 @@ public class PaymentInfo {
     private Date timestamp;
     private String orderId;
     private String userName;
+    private PaymentStatus paymentStatus = PaymentStatus.PENDING;
 
     public PaymentInfo() {
         this.creditCardInfo = null;

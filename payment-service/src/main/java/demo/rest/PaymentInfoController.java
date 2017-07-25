@@ -1,6 +1,7 @@
 package demo.rest;
 
 import demo.domain.PaymentInfo;
+import demo.domain.PaymentStatus;
 import demo.service.PaymentInfoDto;
 import demo.service.PaymentInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +41,11 @@ public class PaymentInfoController {
     }
 
     @RequestMapping(value = "/paymentinfos/{orderId}", method = RequestMethod.GET)
-    public PaymentInfo findByOrderId(@PathVariable("orderId") String orderId) {
+    public PaymentInfo findByOrderId(@PathVariable("orderId") String orderId) throws Exception {
+        PaymentStatus paymentStatus = this.paymentInfoService.findByOrderId(orderId).getPaymentStatus();
+        if (paymentStatus == PaymentStatus.FAILED) {
+            throw new Exception("payment failed");
+        }
         return this.paymentInfoService.findByOrderId(orderId);
     }
 
